@@ -21,15 +21,15 @@ function fish_right_prompt
   set -l s $status
 
   if not test $s -eq 0
-    set_color $fish_color_error
+  set_color $fish_color_error
     printf '%d' $s
   end
 
-	set_color $fish_color_command
-	printf '%s ' (__fish_git_prompt)
+  set_color $fish_color_command
+  printf '%s ' (__fish_git_prompt)
 
-	set_color $fish_color_param
-	printf (date +'%H:%M:%S')
+  set_color $fish_color_param
+  printf (date +'%H:%M:%S')
 
-	set_color $fish_color_normal
+  set_color $fish_color_normal
 end
