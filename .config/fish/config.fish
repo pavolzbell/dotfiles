@@ -25,8 +25,8 @@ set -g __fish_git_prompt_char_stagedstate ◴
 set -g __fish_git_prompt_char_stashstate ✱
 set -g __fish_git_prompt_char_stateseparator ¦
 set -g __fish_git_prompt_char_untrackedfiles …
-set -g __fish_git_prompt_char_upstream_ahead ⇡
-set -g __fish_git_prompt_char_upstream_behind ⇣
+set -g __fish_git_prompt_char_upstream_ahead ↑
+set -g __fish_git_prompt_char_upstream_behind ↓
 set -g __fish_git_prompt_char_upstream_diverged ≠
 set -g __fish_git_prompt_char_upstream_equal =
 set -g __fish_git_prompt_char_upstream_prefix ''
@@ -94,6 +94,9 @@ alias dsflush "dscacheutil -flushcache; and killall -HUP mDNSResponder"
 
 # Recursively delete `.DS_Store` files
 alias dscleanup "find . -type f -name '*.DS_Store' -ls -delete"
+
+# Recursively delete `._*` files, merges most recent attributes
+alias dtcleanup "dot_clean -mv ."
 
 # Clean up Launch Services to remove duplicates in the “Open With” menu
 alias lscleanup "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user; and killall Finder"
