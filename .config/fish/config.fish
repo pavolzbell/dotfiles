@@ -7,7 +7,7 @@ set -Ux MANPATH /usr/local/opt/coreutils/libexec/gnuman /usr/local/share/man /us
 # set -Ux fish_user_paths /usr/local/opt/coreutils/libexec/gnubin -> works, but not a good solution
 
 # TODO find a better way how to: fix default ruby on start
-#rvm default
+rvm default
 
 set -x EDITOR vim
 set -x MANPAGER "less -X"
