@@ -50,9 +50,9 @@ abbr -a l  ls --indicator-style=none -lh
 abbr -a la ls --indicator-style=none -lh -A
 abbr -a ls ls --indicator-style=none
 
-abbr -a k  tree --dirsfirst -hC -pD -ug -L 1
-abbr -a ka tree --dirsfirst -hC -pD -ug -L 1 -a
-abbr -a ks tree --dirsfirst
+abbr -a k  tree --dirsfirst -N -hC -pD -ug -L 1
+abbr -a ka tree --dirsfirst -N -hC -pD -ug -L 1 -a
+abbr -a ks tree --dirsfirst -N
 
 abbr -a du du -h -d 1
 abbr -a df df -h
