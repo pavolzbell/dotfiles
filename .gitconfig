@@ -105,6 +105,9 @@
 
 [push]
 
+  # Push only the current branch to the corresponding remote branch
+  default = simple
+
   # Make `git push` push relevant annotated tags when pushing branches out
   followTags = true
 
