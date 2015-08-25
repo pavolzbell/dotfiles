@@ -1,0 +1,129 @@
+[user]
+
+  name = Pavol Zbell
+  email = pavol.zbell@gmail.com
+
+[alias]
+
+  # Add all
+  a = add -A
+
+  # Commit
+  c = commit
+
+  # View the current working tree status
+  s = status -s
+
+  # View abbreviated SHA, description, and history graph
+  l = log --graph --pretty=format:'%C(bold blue)%h %Creset%s %C(bold blue)%cn %C(bold yellow)%cr%C(bold red)%d'
+
+  # Show the diff between the latest commit and the current state
+  d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+
+  # Pull in remote changes for the current repository and all its submodules
+  p = !"git pull; git submodule foreach git pull origin master"
+
+  # Clone a repository including all submodules
+  cl = clone --recursive
+
+  # Commit all changes
+  ca = !git add -A && git commit -a
+
+  # Checkout
+  co = checkout
+
+  # Switch to a branch, creating it if necessary
+  go = !"f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+
+  # `git di $number` shows the diff between the state `$number` revisions ago and the current state
+  di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+
+  # Show verbose output about tags, branches or remotes
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+
+  # List contributors with number of commits
+  contributors = shortlog --summary --numbered
+
+  # Amend the currently staged files to the latest commit
+  amend = commit --amend --reuse-message=HEAD
+
+  # Remove the old tag with this name and tag the latest commit with it
+  retag = "!r() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; r"
+
+  # Find branches containing commit
+  fb = "!f() { git branch -a --contains $1; }; f"
+
+  # Find tags containing commit
+  ft = "!f() { git describe --always --contains $1; }; f"
+
+  # Find commits by message
+  fc = "!f() { git log --pretty=format:'%C(bold blue)%h %Creset%s %C(bold blue)%cn %C(bold yellow)%cr%C(bold red)%d' --decorate --date=short --grep=$1; }; f"
+
+  # Find commits by source code
+  fs = "!f() { git log --pretty=format:'%C(bold blue)%h %Creset%s %C(bold blue)%cn %C(bold yellow)%cr%C(bold red)%d' --decorate --date=short -S$1; }; f"
+
+[core]
+  # Make `git rebase` safer on OS X
+  # http://www.git-tower.com/blog/make-git-rebase-safe-on-osx
+  trustctime = false
+
+  # Prevent showing files whose names contain non-ASCII symbols as unversioned
+  # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
+  precomposeunicode = true
+
+[color "branch"]
+
+  current = yellow bold
+  local = blue bold
+  remote = green bold
+
+[color "diff"]
+
+  meta = blue bold
+  frag = yellow bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+
+  added = green bold
+  changed = blue bold
+  deleted = red bold
+  untracked = yellow bold
+
+[diff]
+
+  # Detect copies as well as renames
+  renames = copies
+
+[diff "bin"]
+
+  # Use `hexdump` to diff binary files
+  textconv = hexdump -v -C
+
+[push]
+
+  # Make `git push` push relevant annotated tags when pushing branches out
+  followTags = true
+
+[url "git@github.com:"]
+
+  insteadOf = "gh:"
+  pushInsteadOf = "github:"
+  pushInsteadOf = "git://github.com/"
+
+[url "git://github.com/"]
+
+  insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+
+  insteadOf = "gst:"
+  pushInsteadOf = "gist:"
+  pushInsteadOf = "git://gist.github.com/"
+
+[url "git://gist.github.com/"]
+
+  insteadOf = "gist:"
