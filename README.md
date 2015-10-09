@@ -35,4 +35,4 @@
 
 ## License
 
-This software is released under the [MIT License](LICENSE.md).
+This software is released under the [MIT License](LICENSE.md)
