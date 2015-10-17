@@ -73,6 +73,31 @@
   # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
   precomposeunicode = true
 
+[diff]
+
+  # Detect copies as well as renames
+  renames = copies
+
+[diff "bin"]
+
+  # Use `hexdump` to diff binary files
+  textconv = hexdump -v -C
+
+[push]
+
+  # Push only the current branch to the corresponding remote branch
+  default = simple
+
+  # Make `git push` push relevant annotated tags when pushing branches out
+  followTags = true
+
+[filter "lfs"]
+
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+
+	required = true
+
 [color "branch"]
 
   current = yellow bold
@@ -92,24 +117,6 @@
   changed = blue bold
   deleted = red bold
   untracked = yellow bold
-
-[diff]
-
-  # Detect copies as well as renames
-  renames = copies
-
-[diff "bin"]
-
-  # Use `hexdump` to diff binary files
-  textconv = hexdump -v -C
-
-[push]
-
-  # Push only the current branch to the corresponding remote branch
-  default = simple
-
-  # Make `git push` push relevant annotated tags when pushing branches out
-  followTags = true
 
 [url "git@github.com:"]
 
