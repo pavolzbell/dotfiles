@@ -50,12 +50,13 @@ abbr -a l  ls --indicator-style=none -lh
 abbr -a la ls --indicator-style=none -lh -A
 abbr -a ls ls --indicator-style=none
 
-abbr -a k  tree --dirsfirst -N -hC -pD -ug -L 1
-abbr -a ka tree --dirsfirst -N -hC -pD -ug -L 1 -a
+abbr -a k  tree --dirsfirst -N -hC -pD -ug    -L 1
+abbr -a ka tree --dirsfirst -N -hC -pD -ug -a -L 1
 abbr -a ks tree --dirsfirst -N
 
-abbr -a du du -h -d 1
 abbr -a df df -h
+abbr -a dn ncdu -2
+abbr -a du du -h -d 1
 
 # Copy SSH public key to clipboard
 abbr -a cpssh "pbcopy < ~/.ssh/id_rsa.pub"
@@ -86,8 +87,8 @@ end
 # OS X helpers
 #
 
-# Update OS X, brew and gems
-alias update "sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; sudo gem update --system; sudo gem update"
+# Update OS X, brew, gems and fish completions
+alias update "sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; sudo gem update --system; sudo gem update; fish_update_completions"
 
 # Flush Directory Service cache
 alias dsflush "dscacheutil -flushcache; and killall -HUP mDNSResponder"
