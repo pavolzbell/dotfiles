@@ -6,11 +6,17 @@ set -Ux MANPATH /usr/local/opt/coreutils/libexec/gnuman /usr/local/share/man /us
 # set -Ux PATH /usr/local/opt/coreutils/libexec/gnubin ... -> works, but not a good solution
 # set -Ux fish_user_paths /usr/local/opt/coreutils/libexec/gnubin -> works, but not a good solution
 
-# TODO find a better way how to: fix default ruby on start
-rvm default
-
 set -x EDITOR vim
 set -x MANPAGER "less -X"
+
+#
+# Ruby
+#
+
+# TODO disable generating documentation on rbenv install
+# TODO do not set path once rbenv with default fish support (probably 1.0.0) ships with homebrew
+set -gx PATH ~/.rbenv/bin $PATH
+status --is-interactive; and . (rbenv init -|psub)
 
 #
 # Git
@@ -37,7 +43,7 @@ set -g __fish_git_prompt_char_upstream_prefix ''
 
 abbr -a d cd ~/Downloads
 abbr -a p cd ~/Projects
-abbr -a w cd ~/Workspace
+abbr -a w cd ~/Workspaces
 
 abbr -a b bundle
 abbr -a r rails

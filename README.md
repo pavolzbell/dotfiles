@@ -21,8 +21,7 @@
 
 ### Other notes
 
-* Install RVM, PostgreSQL, Elasticsearch, etc. with homebrew manually
-* Add RVM to fish [rvm.io/integration/fish](https://rvm.io/integration/fish)
+* Install PostgreSQL, Elasticsearch, etc. with homebrew manually
 * Configure PostgreSQL at `/usr/local/var/postgres/postgresql.conf`
 * Configure Elasticsearch at `/usr/local/opt/elasticsearch/config/elasticsearch.yml`
 
