@@ -1,4 +1,4 @@
-function gh
+function github
   set url 'https://github.com'
   set repository (git remote show -n origin ^/dev/null | grep "Fetch URL" | perl -ne 'print $1 if /(\w+\/\w+)(?=\.git)/')
   set branch (git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
