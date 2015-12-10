@@ -93,19 +93,19 @@ end
 # OS X helpers
 #
 
-# Update OS X, brew, gems and fish completions
-alias update "sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; sudo gem update --system; sudo gem update; fish_update_completions"
+# Update OS X, brew and fish completions
+alias update "sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; fish_update_completions"
 
 # Flush Directory Service cache
 alias dsflush "dscacheutil -flushcache; and killall -HUP mDNSResponder"
 
-# Recursively delete `.DS_Store` files
+# Recursively delete .DS_Store files
 alias dscleanup "find . -type f -name '*.DS_Store' -ls -delete"
 
-# Recursively delete `._*` files, merges most recent attributes
+# Recursively delete ._* files, merges most recent attributes
 alias dtcleanup "dot_clean -mv ."
 
-# Clean up Launch Services to remove duplicates in the “Open With” menu
+# Clean up Launch Services to remove duplicates in the Open With menu
 alias lscleanup "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user; and killall Finder"
 
 # Empty the Trash on all mounted volumes
@@ -126,7 +126,7 @@ alias hideicons "defaults write com.apple.finder CreateDesktop -bool false; and 
 # Merge PDF files, usage: `mergepdf output.pdf input{1,2,3}.pdf`
 alias mergepdf "/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py -o"
 
-# Stuff I never really use but cannot delete either because of http://xkcd.com/530
+# Stuff never really used but cannot be deleted either because of http://xkcd.com/530
 alias stfu "osascript -e 'set volume output muted true'"
 alias pumpitup "osascript -e 'set volume 7'"
 
