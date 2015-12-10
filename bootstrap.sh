@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "${BASH_SOURCE}")";
+cd "$(dirname "${BASH_SOURCE}")"
 
-git pull origin master;
+git pull origin master
 
-rsync --exclude ".DS_Store" --exclude ".git/" \
-      --exclude "bootstrap.sh" --exclude "brew.sh" \
-      --exclude "LICENSE.md" --exclude "README.md" \
-      -avh --no-perms . ~;
+rsync -avh --no-perms --exclude ".git" --exclude-from ".gitignore" --exclude "bootstrap.sh" --exclude "*.md" . ~
