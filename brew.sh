@@ -1,54 +1,80 @@
 #!/usr/bin/env bash
 
+#
+# TODO get rid of brew.sh in favor of homebrew-bundle, see https://github.com/Homebrew/homebrew-bundle
+#
+
 # Ask for the administrator password upfront
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until the script has finished
+# Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Make sure we’re using the latest Homebrew
 brew update
-
-# Upgrade any already-installed formulae
 brew upgrade --all
 
-# Install GNU core utilities (those that come with OS X are outdated)
+# Add taps
+brew tap caskroom/cask
+brew tap caskroom/fonts
+brew tap homebrew/versions
+brew tap homebrew/x11
+
+# Install GNU utilities (those that come with OS X are outdated)
 brew install coreutils
+brew install moreutils
+brew install findutils
+brew install gnu-sed --with-default-names
 sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
-# Install some other useful utilities like `sponge`
-brew install moreutils
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
-brew install findutils
-
-# Install GNU `sed`, overwriting the built-in `sed`
-brew install gnu-sed --with-default-names
-
-# Install shells
-brew install bash
-brew tap homebrew/versions
-brew install bash-completion2
-brew install fish
-brew install zsh
-
-# Install `wget` with IRI support
-brew install wget --with-iri
-
-# Install more recent versions of some OS X tools
+# Install updated versions of some OS X tools
 brew install vim --override-system-vi
+brew install wget --with-iri
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
+
+# Install shells
+brew install bash
+brew install fish
 
 # Install Git
 brew install git
 brew install git-lfs
 
-# Install other useful binaries
+# Install libraries
+brew install libexif
+brew install libpng
+brew install libusb
+brew install libxml2
+brew install libyaml
+
+# Install others
 brew install ack
+brew install htop-osx
+brew install mc
+brew install ncdu
+brew install nmap
+brew install p7zip
 brew install rename
 brew install tree
+brew install unrar
+brew install xz
 
-# Remove outdated versions from the cellar
+# TODO wait for rbenv 1.0.0 available at homebrew
+# Install Ruby
+#brew install rbenv
+#brew install rbenv-bundler
+#brew install ruby-build
+
 brew cleanup
+
+# TODO
+# consider creating an extension to this file to install:
+# rbenv, ruby-build, pry
+# elasticsearch, postgresql
+# google-chrome
+# atom, rubymine, dia, pgadmin3
+# font-fontawesome, font-octicons, font-open-sans
+# maven
+# Caskroom/cask/java
+# Caskroom/cask/eclipse-platform

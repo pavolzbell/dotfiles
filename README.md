@@ -19,7 +19,7 @@
 * Set as default shell `chsh -s fish`
 * Set path to GNU coreutils `set -U fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths` to replace outdated OS X utilities
 
-### Other notes
+### Notes
 
 * Install PostgreSQL, Elasticsearch, etc. with homebrew manually
 * Configure PostgreSQL at `/usr/local/var/postgres/postgresql.conf`
