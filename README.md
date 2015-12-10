@@ -1,6 +1,8 @@
 # dotfiles
 
-## Clone repository
+Fishedotfiles
+
+## Setup
 
 * Clone `git clone https://github.com/pavolzbell/dotfiles.git`
 
