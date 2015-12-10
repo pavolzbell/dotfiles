@@ -1,14 +1,21 @@
 .bundle
 .idea
+.metadata
 .project
 .tags
 
 ._*
 .DS_Store
+.Spotlight-V100
 .Trashes
 
-Desktop.ini
-Thumbs.db
+.~lock.*
+*.auto*
+*.*~
+*~$*
 
 fishd.*
 fish_history
+
+Desktop.ini
+Thumbs.db
