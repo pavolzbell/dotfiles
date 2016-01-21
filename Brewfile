@@ -25,11 +25,10 @@ brew 'git-lfs'
 # Java
 brew 'maven'
 
-# TODO wait for rbenv 1.0.0 with fish support to be available at Homebrew
 # Ruby
-# brew 'rbenv'
-# brew 'rbenv-bundler'
-# brew 'ruby-build'
+brew 'rbenv'
+brew 'rbenv-bundler'
+brew 'ruby-build'
 
 # Storage
 brew 'elasticsearch'
@@ -38,6 +37,7 @@ brew 'redis'
 
 # Utilities
 brew 'ack'
+brew 'cmake'
 brew 'htop-osx'
 brew 'mc'
 brew 'ncdu'
