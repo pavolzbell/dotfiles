@@ -13,10 +13,8 @@ set -x MANPAGER "less -X"
 # Ruby
 #
 
-# TODO disable generating documentation on rbenv install
-# TODO do not set path once rbenv with default fish support (probably 1.0.0) ships with homebrew
-set -gx PATH ~/.rbenv/bin $PATH
-status --is-interactive; and . (rbenv init -|psub)
+set -Ux RUBY_CONFIGURE_OPTS --disable-install-doc
+status --is-interactive; and . (rbenv init -)
 
 #
 # Git
