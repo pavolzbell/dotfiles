@@ -1,26 +1,26 @@
 # TODO find a better way how to: fix bin & man for GNU coreutils,
 # http://www.softec.lu/site/DevelopersCorner/MasteringThePathHelper
 # add /usr/local/opt/coreutils/libexec/gnuman to /etc/manpaths -> does not work
-set -Ux MANPATH /usr/local/opt/coreutils/libexec/gnuman /usr/local/share/man /usr/share/man
+set -x MANPATH /usr/local/opt/coreutils/libexec/gnuman /usr/local/share/man /usr/share/man
 # add /usr/local/opt/coreutils/libexec/gnubin to /etc/paths -> works
-# set -Ux PATH /usr/local/opt/coreutils/libexec/gnubin ... -> works, but not a good solution
-# set -Ux fish_user_paths /usr/local/opt/coreutils/libexec/gnubin -> works, but not a good solution
+# set -x PATH /usr/local/opt/coreutils/libexec/gnubin ... -> works, but not a good solution
+# set -x fish_user_paths /usr/local/opt/coreutils/libexec/gnubin -> works, but not a good solution
 
-set -Ux EDITOR vim
-set -Ux MANPAGER "less -X"
+set -x EDITOR vim
+set -x MANPAGER "less -X"
 
 #
 # Java
 #
 
-set -Ux PATH $HOME/.jenv/shims $PATH
+set -x PATH $HOME/.jenv/shims $PATH
 command jenv rehash 2>/dev/null
 
 #
 # Ruby
 #
 
-set -Ux RUBY_CONFIGURE_OPTS --disable-install-doc
+set -x RUBY_CONFIGURE_OPTS --disable-install-doc
 status --is-interactive; and . (rbenv init -|psub)
 
 #
@@ -30,17 +30,17 @@ status --is-interactive; and . (rbenv init -|psub)
 set -g __fish_git_prompt_show_informative_status 1
 
 set -g __fish_git_prompt_char_cleanstate ≀
-set -g __fish_git_prompt_char_dirtystate +
+set -g __fish_git_prompt_char_dirtystate ±
 set -g __fish_git_prompt_char_invalidstate ×
 set -g __fish_git_prompt_char_stagedstate ◴
-set -g __fish_git_prompt_char_stashstate ✱
-set -g __fish_git_prompt_char_stateseparator ¦
+set -g __fish_git_prompt_char_stashstate *
+set -g __fish_git_prompt_char_stateseparator ' '
 set -g __fish_git_prompt_char_untrackedfiles …
-set -g __fish_git_prompt_char_upstream_ahead ↑
-set -g __fish_git_prompt_char_upstream_behind ↓
+set -g __fish_git_prompt_char_upstream_ahead ↥
+set -g __fish_git_prompt_char_upstream_behind ↧
 set -g __fish_git_prompt_char_upstream_diverged ≠
 set -g __fish_git_prompt_char_upstream_equal =
-set -g __fish_git_prompt_char_upstream_prefix ''
+set -g __fish_git_prompt_char_upstream_prefix ' '
 
 #
 # Shortcuts
