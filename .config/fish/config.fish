@@ -6,15 +6,22 @@ set -Ux MANPATH /usr/local/opt/coreutils/libexec/gnuman /usr/local/share/man /us
 # set -Ux PATH /usr/local/opt/coreutils/libexec/gnubin ... -> works, but not a good solution
 # set -Ux fish_user_paths /usr/local/opt/coreutils/libexec/gnubin -> works, but not a good solution
 
-set -x EDITOR vim
-set -x MANPAGER "less -X"
+set -Ux EDITOR vim
+set -Ux MANPAGER "less -X"
+
+#
+# Java
+#
+
+set -Ux PATH $HOME/.jenv/shims $PATH
+command jenv rehash 2>/dev/null
 
 #
 # Ruby
 #
 
 set -Ux RUBY_CONFIGURE_OPTS --disable-install-doc
-status --is-interactive; and . (rbenv init -)
+status --is-interactive; and . (rbenv init -|psub)
 
 #
 # Git
@@ -43,9 +50,9 @@ abbr -a d cd ~/Downloads
 abbr -a p cd ~/Projects
 abbr -a w cd ~/Workspaces
 
+abbr -a g git
 abbr -a b bundle
 abbr -a r rails
-abbr -a g git
 
 abbr -a h history
 abbr -a j jobs

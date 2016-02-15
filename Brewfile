@@ -23,6 +23,7 @@ brew 'git'
 brew 'git-lfs'
 
 # Java
+brew 'jenv'
 brew 'maven'
 
 # Ruby
@@ -59,10 +60,12 @@ brew 'homebrew/x11/feh'
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
 
+# Applications
 cask 'dia'
 cask 'diashapes'
 cask 'pgadmin3'
 
+# Fonts
 cask 'font-fontawesome'
 cask 'font-octicons'
 cask 'font-open-sans'
