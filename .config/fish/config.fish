@@ -42,6 +42,8 @@ set -g __fish_git_prompt_char_upstream_diverged ≠
 set -g __fish_git_prompt_char_upstream_equal =
 set -g __fish_git_prompt_char_upstream_prefix ' '
 
+eval (hub alias -s)
+
 #
 # Shortcuts
 #

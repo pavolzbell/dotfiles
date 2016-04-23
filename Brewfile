@@ -21,6 +21,7 @@ brew 'fish'
 # Git
 brew 'git'
 brew 'git-lfs'
+brew 'hub'
 
 # Java
 brew 'jenv'
