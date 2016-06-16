@@ -59,9 +59,9 @@ abbr -a r rails
 abbr -a h history
 abbr -a j jobs
 
-abbr -a l  ls --indicator-style=none -lh
-abbr -a la ls --indicator-style=none -lh -A
-abbr -a ls ls --indicator-style=none
+abbr -a l  ls --color --indicator-style=none -lh
+abbr -a la ls --color --indicator-style=none -lh -A
+abbr -a ls ls --color --indicator-style=none
 
 abbr -a k  tree --dirsfirst -N -hC -pD -ug    -L 1
 abbr -a ka tree --dirsfirst -N -hC -pD -ug -a -L 1
