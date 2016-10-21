@@ -73,6 +73,10 @@
   # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
   precomposeunicode = true
 
+  # Use global excludes file
+  # http://stackoverflow.com/questions/7529266/git-global-ignore-not-working
+  excludesfile = ~/.gitignore
+
 [diff]
 
   # Detect copies as well as renames
