@@ -15,7 +15,9 @@ rescue LoadError
   warn "Unable to load: #{$!}"
 end
 
-ActiveRecord::Base.logger = Logger.new(STDOUT)
+if defined? ActiveRecord
+  ActiveRecord::Base.logger = Logger.new(STDOUT)
+end
 
 unless respond_to? :y
   def y(o)
