@@ -23,9 +23,12 @@ Fishedotfiles
 
 ### Notes
 
-* Configure PostgreSQL at `/usr/local/var/postgres/postgresql.conf`
-* Configure Elasticsearch at `/usr/local/opt/elasticsearch/config/elasticsearch.yml`
 * Link SHA256 checksum `sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum`
+* Configure Elasticsearch at `usr/local/etc/elasticsearch/elasticsearch.yml`
+* Configure PostgreSQL at `/usr/local/var/postgres/postgresql.conf`
+* Configure Redis at `/usr/local/etc/redis.conf`
+* Consider to pin above, see `brew list --pinned --versions`
+* Check `brew services list`
 
 ## References
 
