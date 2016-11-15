@@ -36,6 +36,7 @@ brew 'ruby-build'
 brew 'elasticsearch'
 brew 'postgres'
 brew 'redis'
+brew 'sqlite'
 
 # Utilities
 brew 'ack'

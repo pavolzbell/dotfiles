@@ -27,7 +27,8 @@ Fishedotfiles
 * Configure Elasticsearch at `usr/local/etc/elasticsearch/elasticsearch.yml`
 * Configure PostgreSQL at `/usr/local/var/postgres/postgresql.conf`
 * Configure Redis at `/usr/local/etc/redis.conf`
-* Consider to pin above, see `brew list --pinned --versions`
+* Consider `brew pin elasticsearch postgresql redis readline sqlite`
+* Check `brew list --pinned --versions`
 * Check `brew services list`
 
 ## References
