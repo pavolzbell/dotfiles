@@ -101,7 +101,7 @@ end
 #
 
 # Update OS X, brew and fish completions
-alias update "sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; fish_update_completions"
+alias update "sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; fish_update_completions"
 
 # Flush Directory Service cache
 alias dsflush "dscacheutil -flushcache; and killall -HUP mDNSResponder"
