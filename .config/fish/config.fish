@@ -75,7 +75,7 @@ abbr -a du du -h -d 1
 abbr -a cpssh "pbcopy < ~/.ssh/id_rsa.pub"
 
 # Intuitive map function, find . -name .gitattributes | map dirname
-alias map "xargs -n1"
+abbr -a map "xargs -n1"
 
 #
 # Application helpers
@@ -116,7 +116,7 @@ alias dtcleanup "dot_clean -mv ."
 alias lscleanup "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user; and killall Finder"
 
 # Empty the Trash on local system and all mounted volumes
-alias emptytrash "set x ~/.Trash/* /Volumes/*/.Trashes/* /private/var/log/asl/*.asl; sudo rm -rfv $x; set -e x"
+alias emptytrash "set x ~/.Trash/* /Volumes/*/.Trashes/* /private/var/log/asl/*.asl; and sudo rm -rfv \$x; and set -e x"
 
 # Enable/disable Spotlight indexing
 alias spotoff "sudo mdutil -a -i off"
