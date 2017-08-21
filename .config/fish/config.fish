@@ -116,7 +116,7 @@ alias dtcleanup "dot_clean -mv ."
 alias lscleanup "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user; and killall Finder"
 
 # Empty the Trash on local system and all mounted volumes
-alias emptytrash "sudo rm -rfv ~/.Trash/*; sudo rm -rfv /Volumes/*/.Trashes/*; sudo rm -rfv /private/var/log/asl/*.asl"
+alias emptytrash "set x ~/.Trash/* /Volumes/*/.Trashes/* /private/var/log/asl/*.asl; sudo rm -rfv $x; set -e x"
 
 # Enable/disable Spotlight indexing
 alias spotoff "sudo mdutil -a -i off"
