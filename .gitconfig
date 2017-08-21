@@ -65,17 +65,20 @@
   fs = "!f() { git log --pretty=format:'%C(bold blue)%h %Creset%s %C(bold blue)%cn %C(bold yellow)%cr%C(bold red)%d' --decorate --date=short -S$1; }; f"
 
 [core]
-  # Make `git rebase` safer on OS X
-  # http://www.git-tower.com/blog/make-git-rebase-safe-on-osx
-  trustctime = false
+
+  # Use global attributes file
+  attributesfile = ~/.gitattributes
+
+  # Use global excludes file
+  excludesfile = ~/.gitignore
 
   # Prevent showing files whose names contain non-ASCII symbols as unversioned
   # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
-  precomposeunicode = true
+  precomposeunicode = false
 
-  # Use global excludes file
-  # http://stackoverflow.com/questions/7529266/git-global-ignore-not-working
-  excludesfile = ~/.gitignore
+  # Make `git rebase` safer on macOS
+  # http://www.git-tower.com/blog/make-git-rebase-safe-on-osx
+  trustctime = false
 
 [diff]
 
