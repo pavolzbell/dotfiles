@@ -65,7 +65,7 @@ tap 'caskroom/fonts'
 # Applications
 cask 'dia'
 cask 'diashapes'
-cask 'pgadmin3'
+cask 'pgadmin4'
 
 # Fonts
 cask 'font-fontawesome'
