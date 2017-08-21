@@ -97,10 +97,10 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS
 end
 
 #
-# OS X helpers
+# macOS helpers
 #
 
-# Update OS X, brew and fish completions
+# Update system, brew and fish completions
 alias update "sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; fish_update_completions"
 
 # Flush Directory Service cache
@@ -115,8 +115,8 @@ alias dtcleanup "dot_clean -mv ."
 # Clean up Launch Services to remove duplicates in the Open With menu
 alias lscleanup "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user; and killall Finder"
 
-# Empty the Trash on all mounted volumes
-alias emptytrash "sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
+# Empty the Trash on local system and all mounted volumes
+alias emptytrash " sudo rm -rfv ~/.Trash/*; sudo rm -rfv /Volumes/*/.Trashes/*; sudo rm -rfv /private/var/log/asl/*.asl"
 
 # Enable/disable Spotlight indexing
 alias spotoff "sudo mdutil -a -i off"
@@ -133,10 +133,6 @@ alias hideicons "defaults write com.apple.finder CreateDesktop -bool false; and 
 # Merge PDF files, usage: `mergepdf output.pdf input{1,2,3}.pdf`
 alias mergepdf "/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py -o"
 
-# Stuff never really used but cannot be deleted either because of http://xkcd.com/530
-alias stfu "osascript -e 'set volume output muted true'"
-alias pumpitup "osascript -e 'set volume 7'"
-
 # Lock the screen
 alias afk "/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession -suspend"
 
@@ -144,5 +140,5 @@ alias afk "/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources
 # Fixes
 #
 
-# Unique PATH elements by preserving order: jenv and rbenv shims seem to add up
+# Unique PATH elements by preserving order, jenv and rbenv shims seem to add up
 set -gx PATH (echo -n $PATH | tr ' ' '\n' | awk '!a[$0]++')
