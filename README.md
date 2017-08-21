@@ -6,9 +6,9 @@ Fishedotfiles
 
 * Clone `git clone https://github.com/pavolzbell/dotfiles.git`
 
-### OS X defaults
+### macOS defaults
 
-* Run `./osx`
+* Run `./macos`
 
 ### Homebrew setup
 
@@ -27,7 +27,7 @@ Fishedotfiles
 * Configure Elasticsearch at `usr/local/etc/elasticsearch/elasticsearch.yml`
 * Configure PostgreSQL at `/usr/local/var/postgres/postgresql.conf`
 * Configure Redis at `/usr/local/etc/redis.conf`
-* Consider `brew pin elasticsearch postgresql redis readline sqlite`
+* Consider `brew pin elasticsearch fish postgresql readline redis sqlite`
 * Check `brew list --pinned --versions`
 * Check `brew services list`
 
@@ -36,7 +36,6 @@ Fishedotfiles
 * [gf3/dotfiles](https://github.com/gf3/dotfiles)
 * [kevinSuttle/dotfiles](https://github.com/kevinSuttle/dotfiles)
 * [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
-* [smolnar/dotfiles](https://github.com/smolnar/dotfiles)
 
 ## License
 
