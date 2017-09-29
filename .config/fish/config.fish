@@ -74,27 +74,12 @@ abbr -a du du -h -d 1
 # Copy SSH public key to clipboard
 abbr -a cpssh "pbcopy < ~/.ssh/id_rsa.pub"
 
-# Intuitive map function, find . -name .gitattributes | map dirname
-abbr -a map "xargs -n1"
-
-#
-# Application helpers
-#
-
-# Kill all the tabs in Chrome to free up memory
-abbr -a killchrome "ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
-
 #
 # Network helpers
 #
 
 abbr -a ip "dig +short myip.opendns.com @resolver1.opendns.com"
 abbr -a ips "ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-abbr -a localip "ipconfig getifaddr en0"
-
-for method in GET HEAD POST PUT DELETE TRACE OPTIONS
-	abbr -a "$method" "lwp-request -m '$method'"
-end
 
 #
 # macOS helpers
@@ -129,9 +114,6 @@ alias hidefiles "defaults write com.apple.finder AppleShowAllFiles -bool false; 
 # Show/hide desktop icons
 alias showicons "defaults write com.apple.finder CreateDesktop -bool true;  and killall Finder"
 alias hideicons "defaults write com.apple.finder CreateDesktop -bool false; and killall Finder"
-
-# Merge PDF files, usage: `mergepdf output.pdf input{1,2,3}.pdf`
-alias mergepdf "/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py -o"
 
 # Lock the screen
 alias afk "/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession -suspend"
