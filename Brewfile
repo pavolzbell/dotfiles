@@ -57,6 +57,7 @@ brew 'exiftool'
 brew 'ffmpeg'
 brew 'imagemagick', args: ['with-x11']
 brew 'mplayer'
+brew 'mkvtoolnix'
 brew 'homebrew/x11/feh'
 
 tap 'caskroom/cask'
