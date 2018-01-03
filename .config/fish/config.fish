@@ -119,6 +119,43 @@ alias hideicons "defaults write com.apple.finder CreateDesktop -bool false; and 
 alias afk "/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 #
+# Colors
+#
+
+set -g fish_color_clock 04819e
+set -g fish_color_cwd 00bf32
+set -g fish_color_cwd_root brred
+set -g fish_color_git 00bf32
+set -g fish_color_host 04819e
+set -g fish_color_separator 60b9ce
+set -g fish_color_status 60b9ce
+set -g fish_color_user 04819e
+
+set -g fish_color_autosuggestion 64df85
+set -g fish_color_cancel normal
+set -g fish_color_command 00bf32
+set -g fish_color_comment 5c9900
+set -g fish_color_end 8eeb00
+set -g fish_color_error 60b9ce
+set -g fish_color_escape bryellow
+set -g fish_color_history_current normal
+set -g fish_color_match --background=brblue
+set -g fish_color_normal normal
+set -g fish_color_operator bryellow
+set -g fish_color_param 04819e
+set -g fish_color_quote 206676
+set -g fish_color_redirection 7cb02c
+set -g fish_color_search_match --background=202020
+set -g fish_color_selection --background=202020
+set -g fish_color_valid_path --underline
+
+set -g fish_pager_color_prefix 60b9ce
+set -g fish_pager_color_completion 04819e
+set -g fish_pager_color_description 04819e
+set -g fish_pager_color_progress normal
+set -g fish_pager_color_secondary normal
+
+#
 # Fixes
 #
 

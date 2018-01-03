@@ -1,17 +1,17 @@
 function fish_prompt
-  set_color $fish_color_param
+  set_color $fish_color_user
   printf '%s' (whoami)
-	set_color $fish_color_error
+	set_color $fish_color_separator
   printf '@'
 
-  set_color $fish_color_param
+  set_color $fish_color_host
   printf '%s' (hostname | cut -d . -f 1)
-  set_color $fish_color_error
+  set_color $fish_color_separator
   printf ':'
 
-  set_color $fish_color_command
+  set_color $fish_color_cwd
   printf '%s' (prompt_pwd)
-  set_color $fish_color_error
+  set_color $fish_color_separator
   printf '$ '
 
   set_color $fish_color_normal
@@ -21,14 +21,15 @@ function fish_right_prompt
   set -l s $status
 
   if not test $s -eq 0
-    set_color $fish_color_error
+    set_color $fish_color_status
     printf '%d' $s
   end
 
-  set_color $fish_color_command
+  # TODO find a faster alternative
+  set_color $fish_color_git
   printf '%s ' (__fish_git_prompt)
 
-  set_color $fish_color_param
+  set_color $fish_color_clock
   printf (date +'%H:%M:%S')
 
   set_color $fish_color_normal
