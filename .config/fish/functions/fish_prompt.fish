@@ -21,7 +21,7 @@ function fish_right_prompt
   set -l s $status
 
   if not test $s -eq 0
-  set_color $fish_color_error
+    set_color $fish_color_error
     printf '%d' $s
   end
 
