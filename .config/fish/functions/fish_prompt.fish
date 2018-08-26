@@ -22,7 +22,7 @@ function fish_right_prompt
 
   if not test $s -eq 0
     set_color $fish_color_status
-    printf '%d' $s
+    printf '%d ' $s
   end
 
   set_color $fish_color_clock
