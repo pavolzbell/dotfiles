@@ -171,7 +171,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 207 599 388 0 0 1280 800 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>211 284 796 473 0 0 1280 800 </string>
+	<string>210 284 796 486 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 570 564 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -970,7 +970,7 @@
 			<key>Window Type</key>
 			<integer>1</integer>
 			<key>Working Directory</key>
-			<string>/Users/zbell</string>
+			<string></string>
 		</dict>
 	</array>
 	<key>NoSyncDisablePromotions</key>
@@ -1067,7 +1067,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-08-14T11:41:58Z</date>
+	<date>2018-08-26T17:52:19Z</date>
 	<key>SUSkippedVersion</key>
 	<string>3.1.6</string>
 	<key>SavePasteHistory</key>
@@ -1130,7 +1130,7 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.1.7</string>
+	<string>3.2.0</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
