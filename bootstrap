@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+rsync -avh --no-perms --exclude ".git" --exclude-from ".gitignore" --exclude "bootstrap" --exclude "*.md" . ~
