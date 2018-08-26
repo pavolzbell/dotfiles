@@ -25,10 +25,6 @@ function fish_right_prompt
     printf '%d' $s
   end
 
-  # TODO find a faster alternative
-  set_color $fish_color_git
-  printf '%s ' (__fish_git_prompt)
-
   set_color $fish_color_clock
   printf (date +'%H:%M:%S')
 
