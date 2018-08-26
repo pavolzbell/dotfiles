@@ -9,8 +9,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Install brew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Install brew bundle
+# Install bundler
 brew tap Homebrew/bundle
 
-# Install stuff
+# Install dependencies
 brew bundle --verbose
