@@ -72,6 +72,8 @@ cask_args appdir: '/Applications'
 
 cask 'atom'
 cask 'dia'
+cask 'eclipse-installer'
+cask 'google-chrome'
 cask 'github'
 cask 'iterm2'
 cask 'pgadmin3'
