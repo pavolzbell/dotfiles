@@ -46,9 +46,9 @@ brew 'sqlite'
 # Media
 brew 'exif'
 brew 'exiftool'
+brew 'feh'
 brew 'ffmpeg'
-brew 'homebrew/x11/feh'
-brew 'imagemagick', args: ['with-x11']
+brew 'imagemagick'
 brew 'mplayer'
 brew 'mkvtoolnix'
 
