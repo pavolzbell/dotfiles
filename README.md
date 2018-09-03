@@ -12,7 +12,7 @@ Fishedotfiles
     cd ..
     rm -rf dotfiles-master dotfiles.zip
     ./.brew
-    sudo echo -e "\n/usr/local/bin/fish" >> /etc/shells
+    echo -e "/usr/local/bin/fish" | sudo tee -a /etc/shells
     chsh -s fish
     fish
     set -U fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
