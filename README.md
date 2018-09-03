@@ -11,14 +11,14 @@ Fishedotfiles
     ./bootstrap
     cd ..
     rm -rf dotfiles-master dotfiles.zip
-    ./brew
+    ./.brew
     sudo echo -e "\n/usr/local/bin/fish" >> /etc/shells
     chsh -s fish
     fish
     set -U fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
     sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
     brew pin fish readline elasticsearch postgresql redis sqlite
-    ./macos
+    ./.macos
     syupdate
     sudo reboot
 
