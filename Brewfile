@@ -3,18 +3,20 @@ brew 'cask'
 tap 'caskroom/cask'
 tap 'caskroom/versions'
 
+cask 'xquartz'
+
 # GNU utilities
 brew 'coreutils'
-brew 'moreutils'
 brew 'findutils'
-brew 'gnu-sed', args: ['with-default-names']
+brew 'moreutils'
 
-# OS updates
-brew 'vim', args: ['override-system-vi']
-brew 'wget', args: ['with-iri']
+# OS overrides
 brew 'grep'
+brew 'gnu-sed', args: ['with-default-names']
 brew 'openssh'
 brew 'screen'
+brew 'vim', args: ['override-system-vi']
+brew 'wget', args: ['with-iri']
 
 # Shells
 brew 'bash'
@@ -57,7 +59,6 @@ brew 'ack'
 brew 'asciinema'
 brew 'cmake'
 brew 'htop-osx'
-brew 'mc'
 brew 'ncdu'
 brew 'nmap'
 brew 'p7zip'
