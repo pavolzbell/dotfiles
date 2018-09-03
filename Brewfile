@@ -3,6 +3,7 @@ brew 'cask'
 tap 'caskroom/cask'
 tap 'caskroom/versions'
 
+tap 'homebrew/dupes'
 tap 'homebrew/versions'
 tap 'homebrew/x11'
 
