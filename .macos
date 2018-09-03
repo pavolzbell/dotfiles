@@ -661,7 +661,8 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 ###############################################################################
 
 # Set up my preferred keyboard shortcuts
-cp -r spectacle/shortcuts.json ~/Library/Application\ Support/Spectacle/Shortcuts.json
+mkdir -p ~/Library/Application\ Support/Spectacle
+cp -r .spectacle/shortcuts.json ~/Library/Application\ Support/Spectacle/Shortcuts.json
 
 ###############################################################################
 # Kill affected applications                                                  #
