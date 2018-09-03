@@ -13,7 +13,7 @@ Fishedotfiles
     rm -rf dotfiles-master dotfiles.zip
     ./.brew
     echo -e "/usr/local/bin/fish" | sudo tee -a /etc/shells
-    chsh -s fish
+    chsh -s /usr/local/bin/fish
     fish
     set -U fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
     sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
