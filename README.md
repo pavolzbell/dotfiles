@@ -5,7 +5,7 @@ Fishedotfiles
 ## Setup
 
     cd ~
-    curl -fsSL 'https://github.com/pavolzbell/dotfiles/archive/master.zip' > dotfiles.zip
+    curl -Lo dotfiles.zip https://github.com/pavolzbell/dotfiles/archive/master.zip
     unzip dotfiles.zip
     cd dotfiles-master
     ./bootstrap
