@@ -1,3 +1,8 @@
+brew 'cask'
+
+tap 'caskroom/cask'
+tap 'caskroom/versions'
+
 tap 'homebrew/versions'
 tap 'homebrew/x11'
 
@@ -25,6 +30,8 @@ brew 'git-sizer'
 brew 'hub'
 
 # Java
+brew 'java'
+brew 'java8'
 brew 'jenv'
 brew 'maven'
 
@@ -64,9 +71,6 @@ brew 'unrar'
 brew 'xz'
 
 # Applications
-brew 'cask'
-
-tap 'caskroom/cask'
 
 cask_args appdir: '/Applications'
 
