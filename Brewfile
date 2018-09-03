@@ -3,10 +3,6 @@ brew 'cask'
 tap 'caskroom/cask'
 tap 'caskroom/versions'
 
-tap 'homebrew/dupes'
-tap 'homebrew/versions'
-tap 'homebrew/x11'
-
 # GNU utilities
 brew 'coreutils'
 brew 'moreutils'
@@ -16,9 +12,9 @@ brew 'gnu-sed', args: ['with-default-names']
 # OS updates
 brew 'vim', args: ['override-system-vi']
 brew 'wget', args: ['with-iri']
-brew 'homebrew/dupes/grep'
-brew 'homebrew/dupes/openssh'
-brew 'homebrew/dupes/screen'
+brew 'grep'
+brew 'openssh'
+brew 'screen'
 
 # Shells
 brew 'bash'
