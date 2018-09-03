@@ -17,7 +17,7 @@ Fishedotfiles
     fish
     set -U fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
     sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
-    brew pin fish readline elasticsearch postgresql redis sqlite
+    brew pin fish readline elasticsearch@2.4 postgresql@9.5 redis sqlite
     ./.macos
     syupdate
     sudo reboot
