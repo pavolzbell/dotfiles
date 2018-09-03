@@ -20,6 +20,7 @@ Fishedotfiles
     brew pin fish readline elasticsearch postgresql redis sqlite
     ./macos
     syupdate
+    sudo reboot
 
 ## Notes
 
