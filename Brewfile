@@ -27,8 +27,8 @@ brew 'git-sizer'
 brew 'hub'
 
 # Java
-brew 'java'
-brew 'java8'
+cask 'java'
+cask 'java8'
 brew 'jenv'
 brew 'maven'
 
