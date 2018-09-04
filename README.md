@@ -22,7 +22,22 @@ Fishedotfiles
     syupdate
     sudo reboot
 
-## Notes
+### macOS
+
+    set name "vulture"
+    sudo scutil --set ComputerName $name
+    sudo scutil --set HostName $name
+    sudo scutil --set LocalHostName $name
+    sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $name
+
+* Check system integrity protection `csrutil status`
+* Permit operations `csrutil disable` and `reboot`, then enable again
+* Check `defaults read NSGlobalDomain AppleFontSmoothing` should be `2`
+* Check `defaults read NSGlobalDomain KeyRepeat` should be `2`
+* Check `defaults read NSGlobalDomain InitialKeyRepeat` should be `14`
+* Check `defaults read com.apple.dock tilesize` should be `34` or `48`
+
+### Services
 
 * Configure Elasticsearch at `usr/local/etc/elasticsearch/elasticsearch.yml`
 * Configure PostgreSQL at `/usr/local/var/postgres/postgresql.conf`
