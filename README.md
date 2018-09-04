@@ -31,7 +31,8 @@ Fishedotfiles
     sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $name
 
 * Check system integrity protection `csrutil status`
-* Permit operations `csrutil disable` and `reboot`, then enable again
+* Permit operations via `csrutil disable` in recovery system (hold `⌘ + R` after restart) then `reboot`
+* Check that `/private/var/vm/sleepimage` is a zero-byte file which can not be rewritten
 * Check `defaults read NSGlobalDomain AppleFontSmoothing` should be `2`
 * Check `defaults read NSGlobalDomain KeyRepeat` should be `2`
 * Check `defaults read NSGlobalDomain InitialKeyRepeat` should be `14`
