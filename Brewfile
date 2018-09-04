@@ -13,7 +13,6 @@ brew 'moreutils'
 # OS overrides
 brew 'grep'
 brew 'gnu-sed', args: ['with-default-names']
-brew 'openssh'
 brew 'screen'
 brew 'vim', args: ['override-system-vi']
 brew 'wget', args: ['with-iri']
