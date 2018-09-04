@@ -17,7 +17,7 @@ Fishedotfiles
     fish
     set -U fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
     sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
-    brew pin fish readline elasticsearch@2.4 postgresql@9.5 redis sqlite
+    brew pin fish readline
     ./.macos
     syupdate
     sudo reboot
@@ -28,7 +28,8 @@ Fishedotfiles
     sudo scutil --set ComputerName $name
     sudo scutil --set HostName $name
     sudo scutil --set LocalHostName $name
-    sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $name
+    set domain "/Library/Preferences/SystemConfiguration/com.apple.smb.server"
+    sudo defaults write $domain NetBIOSName -string $name
 
 * Check system integrity protection `csrutil status`
 * Permit operations via `csrutil disable` in recovery system (hold `⌘ + R` after restart) then `reboot`
@@ -39,6 +40,8 @@ Fishedotfiles
 * Check `defaults read com.apple.dock tilesize` should be `34` or `48`
 
 ### Services
+
+    brew pin elasticsearch@2.4 postgresql@9.5
 
 * Configure Elasticsearch at `usr/local/etc/elasticsearch/elasticsearch.yml`
 * Configure PostgreSQL at `/usr/local/var/postgres/postgresql.conf`
