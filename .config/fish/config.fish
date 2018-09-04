@@ -66,10 +66,12 @@ alias syupdate "sudo softwareupdate -i -a"
 alias dsflush "dscacheutil -flushcache; and killall -HUP mDNSResponder"
 
 # Recursively delete .DS_Store files
-alias dscleanup "find . -type f -name '*.DS_Store' -ls -delete"
+# TODO fix: this operation keeps creation date but changes modification date of affected directories therefore consider keeping .DS_Store files
+# alias dscleanup "find . -type f -name '*.DS_Store' -ls -delete"
 
 # Recursively delete ._* files and merges most recent attributes
-alias dtcleanup "dot_clean -mv ."
+# TODO fix: consider effects of --keep=native and keeping ._* files
+# alias dtcleanup "dot_clean -mv ."
 
 # Clean up launch services to remove duplicates in open with menus
 alias lscleanup "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user; and killall Finder"
