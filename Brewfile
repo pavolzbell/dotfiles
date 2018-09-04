@@ -39,8 +39,8 @@ brew 'rbenv-bundler'
 brew 'ruby-build'
 
 # Storage
-brew 'elasticsearch@2.4'
-brew 'postgresql@9.5'
+brew 'elasticsearch@2.4', link: true
+brew 'postgresql@9.5', link: true
 brew 'redis'
 brew 'sqlite'
 
