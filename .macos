@@ -192,8 +192,11 @@ sudo systemsetup -settimezone "Europe/Bratislava" > /dev/null
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Save screenshots to Pictures
-defaults write com.apple.screencapture location -string "${HOME}/Pictures"
+# Save screenshots to Screenshots inside Pictures
+defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots"
+
+# Save screenshots with custom name prefix
+defaults write com.apple.screencapture name "Screenshot"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
