@@ -1,4 +1,7 @@
 set -gx EDITOR vim
+
+set -gx LC_CTYPE en_US.UTF-8
+
 set -gx MANPAGER "less -X"
 set -gx MANPATH /usr/local/opt/coreutils/libexec/gnuman /usr/local/share/man /usr/share/man
 
