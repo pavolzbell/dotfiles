@@ -16,6 +16,7 @@ command jenv rehash 2> /dev/null
 # Ruby
 #
 
+set -gx JRUBY_OPTS --dev
 set -gx RUBY_CONFIGURE_OPTS --disable-install-doc
 status --is-interactive; and . (rbenv init -|psub)
 
