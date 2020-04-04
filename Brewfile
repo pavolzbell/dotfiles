@@ -25,12 +25,14 @@ brew 'fish'
 brew 'git'
 brew 'git-lfs'
 brew 'git-sizer'
-brew 'hub'
+brew 'github/gh/gh'
 
 # Java
-cask 'java'
-cask 'java8'
 brew 'jenv'
+brew 'openjdk'
+brew 'openjdk@11'
+cask 'adoptopenjdk8'
+brew 'gradle'
 brew 'maven'
 
 # Ruby
