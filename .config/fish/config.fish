@@ -2,8 +2,11 @@ set -gx EDITOR vim
 
 set -gx LC_CTYPE en_US.UTF-8
 
+set -gx QUOTING_STYLE literal
+set -gx TIME_STYLE "+%F %T"
+
 set -gx MANPAGER "less -X"
-set -gx MANPATH /usr/local/opt/coreutils/libexec/gnuman /usr/local/share/man /usr/share/man
+set -gx MANPATH /usr/local/opt/coreutils/libexec/gnuman:/usr/local/share/man:/usr/share/man
 
 #
 # Java
@@ -30,18 +33,19 @@ abbr -a w cd ~/Workspaces
 
 abbr -a g git
 abbr -a b bundle
-abbr -a r rails
+abbr -a r bundle exec rails
+
+abbr -a rails bundle exec rails
+abbr -a rake  bundle exec rake
 
 abbr -a h history
 abbr -a j jobs
 
-abbr -a l  ls --color --indicator-style=none -lh
-abbr -a la ls --color --indicator-style=none -lh -A
-abbr -a ls ls --color --indicator-style=none
+abbr -a la ls --group-directories-first --indicator-style=none -lh -A
+abbr -a ls ls --group-directories-first --indicator-style=none
 
-abbr -a k  tree --dirsfirst -N -hC -pD -ug    -L 1
-abbr -a ka tree --dirsfirst -N -hC -pD -ug -a -L 1
-abbr -a ks tree --dirsfirst -N
+abbr -a ta "tree --dirsfirst --timefmt='%F %T' -N -phD -ug -a"
+abbr -a tr "tree --dirsfirst --timefmt='%F %T' -N"
 
 abbr -a df df -h
 abbr -a dn ncdu -2
@@ -54,7 +58,6 @@ abbr -a cpssh "pbcopy < ~/.ssh/id_rsa.pub"
 #
 
 abbr -a ip "dig +short myip.opendns.com @resolver1.opendns.com"
-abbr -a ips "ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
 #
 # macOS helpers
