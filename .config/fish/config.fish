@@ -37,6 +37,7 @@ abbr -a r bundle exec rails
 
 abbr -a rails bundle exec rails
 abbr -a rake  bundle exec rake
+abbr -a rspec bundle exec rspec
 
 abbr -a h history
 abbr -a j jobs
